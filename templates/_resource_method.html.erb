@@ -27,6 +27,7 @@
   <% end %>
 
   <% unless @outputs.empty? %>
+  <div id="outputs">
     <ul class="tabs">
       <% @outputs.each do |output| %>
         <li class="<%= (output == @outputs.first)? 'active' : '' %>"><a href='#<%= "#{output.keys.first}_#{@method_order}" %>'><%= output.keys.first %></a></li>
@@ -41,6 +42,7 @@
       <% end %>
     </div>
     <br />
+  </div>
   <% end %>
 
   <% unless @request.blank? %>
