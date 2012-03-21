@@ -26,7 +26,7 @@ module RapiDoc
     # returns the location of the controller that is to be parsed
     def controller_location
       # @resource_location
-      "#{::Rails.root.to_s}/app/controllers/#{controller_name}"
+      "#{::Rails.root.to_s}/doc/#{controller_name}"
     end
     
     def get_binding
