@@ -18,7 +18,7 @@
         <ul>
         <% @resources.each do |r| %>
           <li>
-            <%= r.method %>  <a href="/apidoc/<%=r.name %>.html"><%=r.resource_location %></a>
+            <%= r.function_blocks[0].method %>  <a href="/apidoc/<%=r.name %>.html"><%=r.resource_location %></a>
           </li>
         <% end %>
         </ul>
