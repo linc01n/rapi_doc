@@ -18,19 +18,12 @@
         <ul>
         <% @resources.each do |r| %>
           <li>
-            Resource:  <a href="/apidoc/<%=r.name %>.html"><%=r.resource_location %></a>
-            <% if r.function_blocks.any? %>
-              <ul>
-                <% r.function_blocks.each do |method_block| %>
-                  <li><a href="/apidoc/<%=r.name %>.html#method_<%=method_block.method_order%>"><%= method_block.url %></a></li>
-                <% end %>
-              </ul>
-            <% end %>
+            <%= r.method %>  <a href="/apidoc/<%=r.name %>.html"><%=r.resource_location %></a>
           </li>
         <% end %>
         </ul>
       </div>
-    
+
     </div>
   </body>
 </html>
