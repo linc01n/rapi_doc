@@ -31,7 +31,7 @@ namespace :rapi_doc do
     if yml
       resources = []
       yml.keys.each do |key|
-        resources << RapiDoc::ResourceDoc.new(key, yml[key]["location"], yml[key]["controller_name"])
+        resources << RapiDoc::ResourceDoc.new(key, yml[key]["location"], yml[key]["doc_path"])
       end
 
       # generate the apidoc
